@@ -207,7 +207,7 @@ const ChangeUsernameContainer: FunctionComponent<Props> = ({
           )}
         >
           <CallOut
-            color="success"
+            color="positive"
             onClose={closeSuccessMessage}
             className={cn(CLASSES.myUsername.form.successCallOut)}
           >
@@ -341,7 +341,7 @@ const ChangeUsernameContainer: FunctionComponent<Props> = ({
                     </FormField>
                     {submitError && (
                       <CallOut
-                        color="alert"
+                        color="negative"
                         className={CLASSES.myUsername.form.errorMessage}
                       >
                         {submitError}
