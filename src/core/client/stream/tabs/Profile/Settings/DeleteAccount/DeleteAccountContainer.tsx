@@ -10,7 +10,7 @@ import {
 } from "coral-framework/lib/relay";
 import CLASSES from "coral-stream/classes";
 import CancelAccountDeletionMutation from "coral-stream/mutations/CancelAccountDeletionMutation";
-import { Icon } from "coral-ui/components/v2";
+import { Flex, Icon } from "coral-ui/components/v2";
 import { Button } from "coral-ui/components/v3";
 
 import { DeleteAccountContainer_settings } from "coral-stream/__generated__/DeleteAccountContainer_settings.graphql";
@@ -103,12 +103,14 @@ const DeleteAccountContainer: FunctionComponent<Props> = ({
                 onClick={cancelDeletion}
                 className={CLASSES.deleteMyAccount.cancelRequestButton}
               >
-                <Icon size="sm" className={styles.icon}>
-                  block
-                </Icon>
-                <Localized id="profile-account-deleteAccount-cancelDelete">
-                  <span>Cancel account deletion request</span>
-                </Localized>
+                <Flex alignItems="center">
+                  <Icon size="sm" className={styles.icon}>
+                    block
+                  </Icon>
+                  <Localized id="profile-account-deleteAccount-cancelDelete">
+                    <span>Cancel account deletion request</span>
+                  </Localized>
+                </Flex>
               </Button>
             </>
           )}
@@ -124,6 +126,8 @@ const DeleteAccountContainer: FunctionComponent<Props> = ({
                 CLASSES.deleteMyAccount.requestButton
               )}
               onClick={showPopover}
+              data-testid="deleteAccount-request"
+              upperCase
             >
               Request
             </Button>

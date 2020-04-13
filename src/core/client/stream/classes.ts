@@ -855,6 +855,7 @@ const CLASSES = {
     $root: "coral coral-pendingAccountDeletion",
     cancelRequestButton:
       "coral coral-pendingAccountDeletion-cancelRequestButton",
+    icon: "coral coral-pendingAccountDeletion-cancelRequestIcon",
   },
 
   /**
