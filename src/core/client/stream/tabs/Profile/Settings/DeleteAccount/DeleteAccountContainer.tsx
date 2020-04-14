@@ -119,7 +119,7 @@ const DeleteAccountContainer: FunctionComponent<Props> = ({
         {!deletionDate && (
           <Localized id="profile-account-deleteAccount-request">
             <Button
-              color="alert"
+              color="negative"
               variant="filled"
               className={cn(
                 styles.requestButton,
