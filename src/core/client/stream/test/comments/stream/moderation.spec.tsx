@@ -211,7 +211,7 @@ it("reject comment", async () => {
   );
   const link = within(tabPane).getByText(
     "Go to Moderate to review this decision",
-    { selector: "a", exact: false }
+    { selector: "button", exact: false }
   );
   expect(link.props.href).toBe(`/admin/moderate/comment/${firstComment.id}`);
 });
