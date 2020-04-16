@@ -180,7 +180,7 @@ it("post a reply and handle non-visible comment state", async () => {
   });
   act(() =>
     within(comment)
-      .getByText("Dismiss")
+      .getByTestID("callout-close-button")
       .props.onClick()
   );
   expect(
