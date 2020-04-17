@@ -191,7 +191,7 @@ class ReportCommentForm extends React.Component<Props> {
                   </>
                 )}
                 {submitError && (
-                  <ValidationMessage fullWidth>{submitError}</ValidationMessage>
+                  <ValidationMessage>{submitError}</ValidationMessage>
                 )}
               </HorizontalGutter>
               {get(form.getFieldState("reason"), "value") && (
