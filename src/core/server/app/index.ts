@@ -101,7 +101,8 @@ export async function createApp(options: AppOptions): Promise<Express> {
 
   // Enable CORS headers for media assets, font's require them.
   parent.use("/assets/media", cors());
-
+  parent.use("/api/graphql", cors());
+  
   // Static Files
   parent.use("/assets", cacheHeadersMiddleware("1w"), serveStatic);
 
